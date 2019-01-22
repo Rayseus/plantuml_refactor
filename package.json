@@ -1,0 +1,122 @@
+{
+  "name": "plantuml-editor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "flow": "flow",
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test",
+    "e2e": "vue-cli-service e2e",
+    "lint": "vue-cli-service lint",
+    "e2e:open": "vue-cli-service e2e:open"
+  },
+  "dependencies": {
+    "axios": "0.17.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "3.3.7",
+    "clipboard": "1.7.1",
+    "dexie": "2.0.1",
+    "express": "^4.16.4",
+    "font-awesome": "4.7.0",
+    "jquery": "3.2.1",
+    "lodash": "^4.17.11",
+    "marked": "0.3.9",
+    "mysql": "^2.16.0",
+    "plantuml-encoder": "1.2.4",
+    "print-js": "1.0.40",
+    "vee-validate": "2.0.0-rc.23",
+    "vue": "2.5.16",
+    "vue-codemirror": "4.0.1",
+    "vue-lazyload": "1.2.3",
+    "vuex": "3.0.1"
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "^7.0.0-beta.46",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-plugin-unit-jest": "^3.3.0",
+    "@vue/cli-service": "^3.3.1",
+    "@vue/eslint-config-prettier": "^3.0.0-beta.9",
+    "@vue/test-utils": "^1.0.0-beta.10",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.0.4",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-flowtype-errors": "^3.5.1",
+    "flow-bin": "^0.72.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^6.0.6",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app",
+      "@babel/preset-flow"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/prettier"
+    ],
+    "plugins": [
+      "flowtype",
+      "flowtype-errors"
+    ],
+    "rules": {
+      "flowtype-errors/show-errors": 2,
+      "flowtype-errors/show-warnings": 1,
+      "flowtype/boolean-style": 2,
+      "flowtype/define-flow-type": 2,
+      "flowtype/no-dupe-keys": 2,
+      "flowtype/no-primitive-constructor-types": 2,
+      "flowtype/require-parameter-type": 2,
+      "flowtype/require-return-type": 2,
+      "flowtype/require-valid-file-annotation": 2,
+      "flowtype/require-variable-type": 2,
+      "flowtype/use-flow-type": 2
+    }
+  },
+  "eslintIgnore": [
+    "tests/*",
+    "vue.config.js"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "<rootDir>/(tests/unit/**/*.spec.(ts|tsx|js)|**/__tests__/*.(ts|tsx|js))"
+    ]
+  }
+}
